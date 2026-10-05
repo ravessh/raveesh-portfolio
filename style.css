@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: Inter, sans-serif;
+  background: #07111f;
+  color: #eaf2ff;
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+
+.navbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 18px 7%;
+  background: rgba(7,17,31,.88);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #1b2a40;
+}
+.logo { font-size: 1.35rem; font-weight: 800; }
+.logo span, .hero h1 span { color: #64d8ff; }
+nav { display: flex; gap: 24px; }
+nav a { color: #a9b8cc; font-size: .9rem; transition: .2s; }
+nav a:hover { color: #64d8ff; }
+
+.hero {
+  min-height: 88vh; display: grid; grid-template-columns: 1.4fr .8fr;
+  gap: 50px; align-items: center; padding: 80px 7%;
+  background: radial-gradient(circle at 80% 20%, #12365b 0, transparent 34%);
+}
+.eyebrow, .section-tag { color: #64d8ff; font-size: .78rem; font-weight: 800; letter-spacing: 2px; }
+.hero h1 { font-size: clamp(3rem, 7vw, 6rem); line-height: 1.02; margin: 14px 0; letter-spacing: -3px; }
+.hero h2 { color: #b9c8da; font-size: 1.2rem; font-weight: 500; }
+.intro { max-width: 680px; color: #91a4ba; margin: 22px 0 30px; font-size: 1.05rem; }
+.buttons { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 12px 20px; border-radius: 10px; font-weight: 700; border: 1px solid #29415d; transition: transform .2s, background .2s; }
+.btn:hover { transform: translateY(-2px); }
+.primary { background: #64d8ff; color: #04101c; border-color: #64d8ff; }
+.secondary { color: #dce9f7; }
+
+.hero-card {
+  padding: 34px; border: 1px solid #233a54; border-radius: 24px;
+  background: rgba(17,32,52,.72); box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+.avatar {
+  width: 110px; height: 110px; display: grid; place-items: center;
+  border-radius: 50%; background: linear-gradient(135deg,#64d8ff,#7b7cff);
+  color: #06101c; font-size: 2rem; font-weight: 800; margin-bottom: 28px;
+}
+.hero-card p { color: #8fa5bd; }
+.hero-card strong { display: block; margin: 7px 0 14px; }
+.hero-card small { color: #8297ad; }
+
+.section { padding: 100px 7%; }
+.section.alt { background: #0a1728; }
+.section h2 { font-size: clamp(2rem,4vw,3.2rem); margin: 8px 0 32px; letter-spacing: -1px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; color: #9eb0c4; max-width: 1000px; }
+.cards, .projects { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+.card, .project {
+  padding: 25px; border: 1px solid #20354d; border-radius: 16px;
+  background: #0d1d31; transition: transform .2s, border-color .2s;
+}
+.card:hover, .project:hover { transform: translateY(-5px); border-color: #64d8ff; }
+.card span, .project-number { color: #64d8ff; font-weight: 800; }
+.card h3, .project h3 { margin: 16px 0 8px; }
+.card p, .project p { color: #8fa4ba; font-size: .92rem; }
+.projects { grid-template-columns: repeat(3,1fr); }
+.project-number { font-size: .85rem; }
+.pill {
+  display: inline-block; margin-top: 18px; padding: 5px 10px;
+  border-radius: 999px; background: #142b44; color: #a9dff1; font-size: .75rem;
+}
+.interest-box { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 900px; }
+.interest-box > div { padding: 30px; border: 1px solid #20354d; border-radius: 18px; background: #0d1d31; }
+.icon { font-size: 2rem; color: #64d8ff; }
+.interest-box p, .contact > p { color: #91a4ba; }
+.contact { text-align: center; }
+.contact > p { max-width: 650px; margin: 0 auto 25px; }
+.contact .btn { margin-bottom: 18px; }
+.contact .note { font-size: .8rem; }
+footer { text-align: center; padding: 28px; border-top: 1px solid #1b2a40; color: #71859b; font-size: .85rem; }
+
+@media (max-width: 850px) {
+  nav { display: none; }
+  .hero { grid-template-columns: 1fr; padding-top: 60px; }
+  .cards { grid-template-columns: 1fr 1fr; }
+  .projects { grid-template-columns: 1fr; }
+  .about-grid, .interest-box { grid-template-columns: 1fr; }
+}
+@media (max-width: 500px) {
+  .hero h1 { letter-spacing: -2px; }
+  .cards { grid-template-columns: 1fr; }
+  .section { padding: 75px 6%; }
+}
