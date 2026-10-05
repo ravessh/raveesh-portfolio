@@ -30,7 +30,7 @@ nav a:hover { color: #64d8ff; }
   background: radial-gradient(circle at 80% 20%, #12365b 0, transparent 34%);
 }
 .eyebrow, .section-tag { color: #64d8ff; font-size: .78rem; font-weight: 800; letter-spacing: 2px; }
-.hero h1 { font-size: clamp(3rem, 7vw, 6rem); line-height: 1.02; margin: 14px 0; letter-spacing: -3px; }
+.hero h1 { font-size: clamp(2.8, 6vw, 5rem); line-height: 1.02; margin: 14px 0; letter-spacing: -2px; }
 .hero h2 { color: #b9c8da; font-size: 1.2rem; font-weight: 500; }
 .intro { max-width: 680px; color: #91a4ba; margin: 22px 0 30px; font-size: 1.05rem; }
 .buttons { display: flex; gap: 14px; flex-wrap: wrap; }
